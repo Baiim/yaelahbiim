@@ -12,7 +12,6 @@ import Typed from "react-typed";
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from "../constants";
 import IndexImage from "./index-image";
 import ExternalLink from "../external-link";
-// import HomeHeroImage from "./home-hero-image";
 
 const HomeHero = () => {
   return (
@@ -84,10 +83,11 @@ const HomeHero = () => {
           transition={{ delay: 1.0, duration: 0.4 }}
         >
           <Text
-            fontSize="lg"
+            fontSize="md"
             color={mode("gray.800", "gray.400")}
-            as="h2"
+            as="h3"
             align="justify"
+            fontFamily="Poppins"
           >
             <strong>Hello</strong> everyone, you can call me{" "}
             <strong>Baiim</strong> , I'am frontend developer from jakarta,
@@ -114,7 +114,7 @@ const HomeHero = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 1.0, duration: 0.4 }}
         >
-          <NextLink href="/portfolio" passHref>
+          <NextLink href="#" passHref>
             <Button
               rightIcon={<BiArrowToRight />}
               w={{ base: "100%", lg: "50%" }}

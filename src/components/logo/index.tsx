@@ -55,7 +55,7 @@ const Logo = () => {
         variants={variants}
         animate="animate"
       >
-        #
+        🐱
       </MotionText>
     </HStack>
   );

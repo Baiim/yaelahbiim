@@ -21,7 +21,8 @@ const commands: Command[] = [
   {
     title: "Portfolio",
     icon: FcEditImage,
-    href: "/portfolio",
+    // href: "/portfolio",
+    href: "#",
     isExternal: false,
   },
   // {

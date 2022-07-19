@@ -12,7 +12,7 @@ import AboutHero from "../../components/about-hero";
 const About = () => {
   return (
     <Layout title="About" description="About Sektiawan Bimo Prihpambudi">
-      <VStack>
+      <VStack py={{ base: 20, md: 0 }}>
         <AboutHero />
       </VStack>
     </Layout>

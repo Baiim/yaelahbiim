@@ -12,6 +12,7 @@ import MainLayout from "../components/main-layout";
 import theme from "../theme";
 import Command from "../components/command";
 import CommandProvider from "../components/providers/command-provider";
+import { AnimatePresence } from "framer-motion";
 
 const GlobalStyle = ({ children }: { [key: string]: any }) => {
   const { colorMode } = useColorMode();
@@ -58,9 +59,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <MainLayout>
             <Command />
-            <GlobalStyle>
-              <Component {...pageProps} />
-            </GlobalStyle>
+            <AnimatePresence exitBeforeEnter initial>
+              <GlobalStyle>
+                <Component {...pageProps} />
+              </GlobalStyle>
+            </AnimatePresence>
           </MainLayout>
         </ColorModeProvider>
       </ChakraProvider>

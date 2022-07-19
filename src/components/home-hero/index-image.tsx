@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from "../constants";
+import Status from "../../components/status";
 
 const IndexImage = (props: BoxProps) => {
   return (
@@ -33,6 +34,7 @@ const IndexImage = (props: BoxProps) => {
             borderColor={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
             src="/images/photo.jpg"
           />
+          <Status />
         </Center>
       </motion.div>
     </Box>

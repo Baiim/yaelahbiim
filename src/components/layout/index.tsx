@@ -63,7 +63,7 @@ const Layout = ({ children, title, description }: LayoutProps) => {
       <MotionContainer
         display="flex"
         maxW={{ base: "container.lg", xl: "container.xl" }}
-        minH={{ base: "auto", md: "100vh" }}
+        minH={{ base: "auto", md: "150vh" }}
         px={{ base: 4, lg: 0 }}
         overflow="hidden"
         initial="hidden"

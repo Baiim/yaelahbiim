@@ -11,6 +11,7 @@ import {
   VStack,
   StackProps,
   Stack,
+  TextProps,
 } from "@chakra-ui/react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useState } from "react";
@@ -84,8 +85,20 @@ const rightVariants: Variants = {
     },
   },
 };
+const variants: Variants = {
+  animate: {
+    opacity: [0, 0, 0, 0, 1, 1, 1, 1],
+    transition: {
+      delay: 2,
+      duration: 5,
+      repeat: Infinity,
+      ease: [0.15, 0.85, 0.15, 0.85],
+    },
+  },
+};
 
 const MotionStack = motion<StackProps>(VStack);
+const MotionText = motion<TextProps>(Text);
 
 const AboutHero = () => {
   const toast = useToast();
@@ -134,13 +147,16 @@ const AboutHero = () => {
             lineHeight="6"
           >
             Sektiawan Bimo Prihpambudi
-            <Text
+            <MotionText
               as="span"
               fontSize="5rem"
+              fontWeight="extrabold"
               color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
+              variants={variants}
+              animate="animate"
             >
               .
-            </Text>
+            </MotionText>
           </Heading>
           <Divider
             w={10}
@@ -160,10 +176,10 @@ const AboutHero = () => {
           <Image
             alt="Avatar image"
             w="75%"
-            h={{ base: 450, lg: 450 }}
+            h={{ base: 400, lg: 400 }}
             fit="cover"
-            src="/images/photo.png"
-            fallback={<Skeleton h={{ base: 450, lg: 450 }} />}
+            src="/images/cosmos.png"
+            fallback={<Skeleton h={{ base: 400, lg: 400 }} />}
           />
           <Tooltip label="See random quotes ..." hasArrow>
             <Button
@@ -171,6 +187,7 @@ const AboutHero = () => {
               variant="solid"
               colorScheme="hakka"
               onClick={sendRandomQuotes}
+              fontFamily="Poppins"
             >
               Frontend Developer
             </Button>
@@ -191,11 +208,15 @@ const AboutHero = () => {
             align={{ base: "center", md: "end" }}
           >
             <SummaryTitle number={1} title="Introduction" />
-            <Heading fontSize="3xl" fontFamily="Berskhire Swash">
+            <Heading fontSize="3xl" fontFamily="Poppins">
               Frontend Developer
             </Heading>
           </VStack>
-          <Text color="gray.500" textAlign={{ base: "center", md: "end" }}>
+          <Text
+            color="gray.500"
+            textAlign={{ base: "center", md: "end" }}
+            fontFamily="Poppins"
+          >
             A passionate <strong>developer</strong> having an experience of
             building <strong>smart</strong> and <strong>scalable</strong>{" "}
             websites with a great <strong>user experience</strong>.
