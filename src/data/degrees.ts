@@ -1,23 +1,35 @@
-import { Degree } from "./degree"
+import { Degree } from "./degrees"
 import { GiDiploma } from "@react-icons/all-files/gi/GiDiploma"
 import { IoMdSchool } from "@react-icons/all-files/io/IoMdSchool"
 
 const degrees: Degree[] = [
   {
-    title: "DUT Networks and Telecommunications (two-year university degree)",
-    date: "2020-2021",
-    location: "IUT Châlons (Châlons-en-Champagne, France)",
+    title: "Information technology Degree",
+    date: "2018-2024",
+    location: "Universitas Pelita Bangsa cikarang",
     icon: IoMdSchool,
     details: ["First year"]
   },
   {
-    title: "Scientific Baccalaureate (A level equivalent)",
-    date: "2019-2020",
-    location: "Lycée Jean Talon (Châlons-en-Champagne, France)",
+    title: "Mastering Dart and Flutter Development",
+    date: "2021",
+    location: "BuildWithAngga",
     icon: GiDiploma,
     details: [
-      "Specialised in ISN (Computer and digital sicences)",
-      "With distinctions"
+      "Create Project with Flutter",
+      "Create Project with Dart",
+      "Create Project with Flutter and Dart",
+      "Create Project Find House"
+    ]
+  },
+  {
+    title: "FullStack Web Development",
+    date: "2021",
+    location: "BuildWithAngga",
+    icon: GiDiploma,
+    details: [
+      "Create Project with Laravel",
+      "Create Project with  Laravel : Web HMI and Web Dashboard"
     ]
   }
 ]

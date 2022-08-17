@@ -2,15 +2,30 @@ import { Projects } from "../types/projects"
 
 const projects: Projects[] = [
   {
-    image: "https://i.ibb.co/qxXxXxq/project-1.png",
-    title: "Project 1",
+    image: "/images/film.png",
+    title: "React Movie App",
     link: "https://www.google.com",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Designed and developed a web application using React and Redux to manage movie data.",
     stack: [
       {
         stack: "React"
       },
+      {
+        stack: "Redux"
+      },
+      {
+        stack: "JavaScript"
+      }
+    ]
+  },
+  {
+    image: "/images/webhmi.png",
+    title: "Project 1",
+    link: "http://hmikomfatek.org/",
+    description:
+      "Designed and developed a web application using Laravel for HMI Organization.",
+    stack: [
       {
         stack: "Laravel"
       },
