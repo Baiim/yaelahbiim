@@ -1,4 +1,4 @@
-import { Experience } from "../../types/experience";
+import { Experience } from "../../types/experience"
 import {
   Heading,
   HStack,
@@ -8,14 +8,14 @@ import {
   SkeletonCircle,
   Text,
   useColorModeValue as mode,
-  VStack,
-} from "@chakra-ui/react";
+  VStack
+} from "@chakra-ui/react"
 import {
   DARK_BLUE_COLOR,
   DARK_CARD_COLOR,
   LIGHT_BLUE_COLOR,
-  LIGHT_CARD_COLOR,
-} from "../constants";
+  LIGHT_CARD_COLOR
+} from "../constants"
 
 const Experience = ({ title, company, date, location, tasks }: Experience) => {
   return (
@@ -61,7 +61,7 @@ const Experience = ({ title, company, date, location, tasks }: Experience) => {
         ))}
       </List>
     </VStack>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

@@ -3,11 +3,11 @@ import {
   BoxProps,
   Center,
   Image,
-  useColorModeValue as mode,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from "../constants";
-import Status from "../../components/status";
+  useColorModeValue as mode
+} from "@chakra-ui/react"
+import { motion } from "framer-motion"
+import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from "../constants"
+import Status from "../../components/status"
 
 const IndexImage = (props: BoxProps) => {
   return (
@@ -18,7 +18,7 @@ const IndexImage = (props: BoxProps) => {
         transition={{
           delay: 0.5,
           duration: 0.4,
-          ease: [0.15, 0.85, 0.15, 0.85],
+          ease: [0.15, 0.85, 0.15, 0.85]
         }}
       >
         <Center>
@@ -29,8 +29,8 @@ const IndexImage = (props: BoxProps) => {
             rounded="2xl"
             boxShadow="lg"
             border="2px solid"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             borderColor={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
             src="/images/photo.jpg"
           />
@@ -38,7 +38,7 @@ const IndexImage = (props: BoxProps) => {
         </Center>
       </motion.div>
     </Box>
-  );
-};
+  )
+}
 
-export default IndexImage;
+export default IndexImage

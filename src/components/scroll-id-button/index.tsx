@@ -1,14 +1,14 @@
-import { Button } from "@chakra-ui/react";
-import { HiOutlineArrowNarrowDown } from "@react-icons/all-files/hi/HiOutlineArrowNarrowDown";
+import { Button } from '@chakra-ui/react'
+import { HiOutlineArrowNarrowDown } from '@react-icons/all-files/hi/HiOutlineArrowNarrowDown'
 
 const ScrollIdButton = ({ text, id }) => {
   const scrollTo = (id) => {
     document.querySelector(`#${id}`).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-  };
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
 
   return (
     <Button
@@ -20,7 +20,7 @@ const ScrollIdButton = ({ text, id }) => {
     >
       {text}
     </Button>
-  );
-};
+  )
+}
 
-export default ScrollIdButton;
+export default ScrollIdButton

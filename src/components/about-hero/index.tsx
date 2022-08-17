@@ -12,79 +12,84 @@ import {
   StackProps,
   Stack,
   TextProps,
-} from "@chakra-ui/react";
-import { AnimatePresence, motion, Variants } from "framer-motion";
-import { useState } from "react";
-import { LIGHT_BLUE_COLOR, DARK_BLUE_COLOR } from "../constants";
-import SocialMedia from "../social-media";
-import SummaryTitle from "../summary-title";
-import ScrollIdButton from "../scroll-id-button";
-import { Quotes } from "../../types/quotes";
-import quotes from "../../data/quotes";
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel
+} from '@chakra-ui/react'
+import { AnimatePresence, motion, Variants } from 'framer-motion'
+import { useState } from 'react'
+import { LIGHT_BLUE_COLOR, DARK_BLUE_COLOR } from '../constants'
+import SocialMedia from '../social-media'
+import SummaryTitle from '../summary-title'
+import ScrollIdButton from '../scroll-id-button'
+import { Quotes } from '../../types/quotes'
+import quotes from '../../data/quotes'
 
 const leftVariants: Variants = {
   hidden: {
     x: -30,
     opacity: 0,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.4,
-      ease: "easeOut",
-    },
+      ease: 'easeOut'
+    }
   },
   visible: {
     x: 0,
     opacity: 1,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.4,
-      ease: "easeOut",
-    },
-  },
-};
+      ease: 'easeOut'
+    }
+  }
+}
 
 const avatarVariants: Variants = {
   hidden: {
     y: 30,
     opacity: 0,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.4,
-      ease: "easeOut",
-    },
+      ease: 'easeOut'
+    }
   },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.4,
-      ease: "easeOut",
-    },
-  },
-};
+      ease: 'easeOut'
+    }
+  }
+}
 
 const rightVariants: Variants = {
   hidden: {
     x: 30,
     opacity: 0,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.4,
-      ease: "easeInOut",
-    },
+      ease: 'easeInOut'
+    }
   },
   visible: {
     x: 0,
     opacity: 1,
     transition: {
-      type: "tween",
+      type: 'tween',
       delay: 0.5,
       duration: 0.4,
-      ease: "easeInOut",
-    },
-  },
-};
+      ease: 'easeInOut'
+    }
+  }
+}
 const variants: Variants = {
   animate: {
     opacity: [0, 0, 0, 0, 1, 1, 1, 1],
@@ -92,34 +97,34 @@ const variants: Variants = {
       delay: 2,
       duration: 5,
       repeat: Infinity,
-      ease: [0.15, 0.85, 0.15, 0.85],
-    },
-  },
-};
+      ease: [0.15, 0.85, 0.15, 0.85]
+    }
+  }
+}
 
-const MotionStack = motion<StackProps>(VStack);
-const MotionText = motion<TextProps>(Text);
+const MotionStack = motion<StackProps>(VStack)
+const MotionText = motion<TextProps>(Text)
 
 const AboutHero = () => {
-  const toast = useToast();
-  const [index, setIndex] = useState(0);
+  const toast = useToast()
+  const [index, setIndex] = useState(0)
   const sendRandomQuotes = () => {
-    const { description } = quotes[index] as Quotes;
-    console.log("check", description);
+    const { description } = quotes[index] as Quotes
+    console.log('check', description)
     toast({
       description: description,
-      position: "top",
-      variant: "top-accent",
-      status: "info",
+      position: 'top',
+      variant: 'top-accent',
+      status: 'info',
       duration: 5000,
-      isClosable: true,
-    });
+      isClosable: true
+    })
     if (index + 1 === quotes.length) {
-      setIndex(0);
+      setIndex(0)
     } else {
-      setIndex(index + 1);
+      setIndex(index + 1)
     }
-  };
+  }
 
   return (
     <AnimatePresence exitBeforeEnter>
@@ -129,22 +134,23 @@ const AboutHero = () => {
         justify="center"
         align="center"
         spacing={4}
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: 'column', md: 'row' }}
       >
         <MotionStack
           variants={leftVariants}
           initial="hidden"
           animate="visible"
           exit="hidden"
-          w={{ base: "100%", md: "33%" }}
+          w={{ base: '100%', md: '33%' }}
           spacing={8}
-          align={{ base: "center", md: "start" }}
+          align={{ base: 'center', md: 'start' }}
         >
           <Heading
             as="h1"
             fontSize="4xl"
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: 'center', md: 'left' }}
             lineHeight="6"
+            fontFamily="poppins"
           >
             Sektiawan Bimo Prihpambudi
             <MotionText
@@ -171,7 +177,7 @@ const AboutHero = () => {
           animate="visible"
           exit="hidden"
           spacing={-1}
-          w={{ base: "100%", md: "34%" }}
+          w={{ base: '100%', md: '34%' }}
         >
           <Image
             alt="Avatar image"
@@ -198,14 +204,14 @@ const AboutHero = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          w={{ base: "100%", md: "33%" }}
+          w={{ base: '100%', md: '33%' }}
           spacing={4}
-          align={{ base: "center", md: "end" }}
+          align={{ base: 'center', md: 'end' }}
         >
           <VStack
             spacing={-2}
             color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-            align={{ base: "center", md: "end" }}
+            align={{ base: 'center', md: 'end' }}
           >
             <SummaryTitle number={1} title="Introduction" />
             <Heading fontSize="3xl" fontFamily="Poppins">
@@ -214,18 +220,18 @@ const AboutHero = () => {
           </VStack>
           <Text
             color="gray.500"
-            textAlign={{ base: "center", md: "end" }}
+            textAlign={{ base: 'center', md: 'end' }}
             fontFamily="Poppins"
           >
             A passionate <strong>developer</strong> having an experience of
-            building <strong>smart</strong> and <strong>scalable</strong>{" "}
+            building <strong>smart</strong> and <strong>scalable</strong>{' '}
             websites with a great <strong>user experience</strong>.
           </Text>
-          <ScrollIdButton text="Learn more" id="skills" />
+          <ScrollIdButton text="Learn more" id="experiences" />
         </MotionStack>
       </Stack>
     </AnimatePresence>
-  );
-};
+  )
+}
 
-export default AboutHero;
+export default AboutHero

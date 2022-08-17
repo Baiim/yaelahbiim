@@ -1,4 +1,4 @@
-import { Raindrop } from "../../types/raindrop";
+import { Projects } from "../../types/projects"
 import {
   AspectRatio,
   Heading,
@@ -8,23 +8,17 @@ import {
   Skeleton,
   Text,
   useColorModeValue as mode,
-  VStack,
-} from "@chakra-ui/react";
+  VStack
+} from "@chakra-ui/react"
 
 import {
   DARK_BLUE_COLOR,
   DARK_CARD_COLOR,
   LIGHT_BLUE_COLOR,
-  LIGHT_CARD_COLOR,
-} from "../constants";
+  LIGHT_CARD_COLOR
+} from "../constants"
 
-const ProjectCard = ({
-  title,
-  excerpt,
-  cover,
-  link,
-  tags,
-}: Partial<Raindrop>) => {
+const ProjectCard = ({ image, title, description, stack, link }: Projects) => {
   return (
     <LinkBox as="article">
       <VStack
@@ -42,7 +36,7 @@ const ProjectCard = ({
         <AspectRatio ratio={16 / 9} w="full">
           <Image
             alt={`Thumbnail of ${title}`}
-            src={cover}
+            src={image}
             fallback={<Skeleton w="full" h="full" />}
           />
         </AspectRatio>
@@ -57,19 +51,19 @@ const ProjectCard = ({
             </Heading>
           </LinkOverlay>
           <Text fontSize="sm" noOfLines={4} w="100%">
-            {excerpt}
+            {description}
           </Text>
           <Text
             fontSize="xs"
             color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
             textTransform="capitalize"
           >
-            {tags.join(", ")}
+            {stack.join(", ")}
           </Text>
         </VStack>
       </VStack>
     </LinkBox>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard
