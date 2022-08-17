@@ -21,7 +21,7 @@ const projects: Projects[] = [
   },
   {
     image: "/images/webhmi.png",
-    title: "Project 1",
+    title: "Website HMI",
     link: "http://hmikomfatek.org/",
     description:
       "Designed and developed a web application using Laravel for HMI Organization.",
@@ -31,6 +31,9 @@ const projects: Projects[] = [
       },
       {
         stack: "PHP"
+      },
+      {
+        stack: "Bootstrap"
       }
     ]
   }

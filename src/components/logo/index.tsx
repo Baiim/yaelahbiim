@@ -3,11 +3,11 @@ import {
   Link,
   Text,
   TextProps,
-  useColorModeValue as mode,
-} from "@chakra-ui/react";
-import { motion, Variants } from "framer-motion";
-import NextLink from "next/link";
-import DarkModeSwitch from "../dark-mode";
+  useColorModeValue as mode
+} from "@chakra-ui/react"
+import { motion, Variants } from "framer-motion"
+import NextLink from "next/link"
+import DarkModeSwitch from "../dark-mode"
 
 const variants: Variants = {
   animate: {
@@ -16,12 +16,12 @@ const variants: Variants = {
       delay: 0.25,
       duration: 1,
       repeat: Infinity,
-      ease: [0.15, 0.85, 0.15, 0.85],
-    },
-  },
-};
+      ease: [0.15, 0.85, 0.15, 0.85]
+    }
+  }
+}
 
-const MotionText = motion<TextProps>(Text);
+const MotionText = motion<TextProps>(Text)
 
 const Logo = () => {
   return (
@@ -32,15 +32,15 @@ const Logo = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: 0.4,
-          type: "ease",
+          type: "ease"
         }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <NextLink href="/" passHref>
+        <NextLink href='/' passHref>
           <Link
-            as="h1"
-            fontSize="3xl"
+            as='h1'
+            fontSize='3xl'
             fontFamily={["Berkshire Swash"]}
             _hover={{ textDecoration: "none" }}
           >
@@ -49,16 +49,16 @@ const Logo = () => {
         </NextLink>
       </motion.div>
       <MotionText
-        fontSize="3xl"
-        fontWeight="extrabold"
-        color="#ADE8F4"
+        fontSize='3xl'
+        fontWeight='extrabold'
+        color='#ADE8F4'
         variants={variants}
-        animate="animate"
+        animate='animate'
       >
-        🐱
+        #
       </MotionText>
     </HStack>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo
