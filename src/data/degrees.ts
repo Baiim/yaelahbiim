@@ -1,4 +1,4 @@
-import { Degree } from "./degrees"
+import { Degree } from "../types/degree"
 import { GiDiploma } from "@react-icons/all-files/gi/GiDiploma"
 import { IoMdSchool } from "@react-icons/all-files/io/IoMdSchool"
 

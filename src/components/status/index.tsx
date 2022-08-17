@@ -1,82 +1,81 @@
-import status from "../../data/status";
+import status from "../../data/status"
 import {
   HStack,
   StackProps,
   Text,
   useBreakpointValue,
-  useColorModeValue as mode,
-} from "@chakra-ui/react";
-import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from "../constants";
+  useColorModeValue as mode
+} from "@chakra-ui/react"
+import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from "../constants"
 
 const Status = () => {
-  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const isMobile = useBreakpointValue({ base: true, lg: false })
 
-  let stackStyles: StackProps;
+  let stackStyles: StackProps
 
   if (isMobile) {
     stackStyles = {
       width: "fit-content",
       shadow: "lg",
-      spacing: 3,
-    };
+      spacing: 3
+    }
   } else {
     stackStyles = {
       width: 10,
       shadow: "none",
-      spacing: 0,
-    };
+      spacing: 0
+    }
   }
 
   return (
     <HStack
       _hover={{
         width: "fit-content",
-        shadow: "lg",
+        shadow: "lg"
       }}
-      position="absolute"
-      overflow="hidden"
+      position='absolute'
+      overflow='hidden'
       bottom={-5}
-      marginLeft="auto"
-      border="2px solid"
+      marginLeft='auto'
+      border='2px solid'
       borderColor={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
       height={10}
-      alignItems="center"
-      justifyContent="center"
+      alignItems='center'
+      justifyContent='center'
       bg={mode("gray.400", "#2d3142")}
-      rounded="3xl"
+      rounded='3xl'
       px={2}
-      role="group"
-      transitionProperty="all"
-      transitionDuration="slow"
-      transitionTimingFunction="ease-out"
+      role='group'
+      transitionProperty='all'
+      transitionDuration='slow'
+      transitionTimingFunction='ease-out'
       {...stackStyles}
     >
       <Text>{status.emoji}</Text>
       <Text
-        isTruncated
         width={0}
-        maxWidth="full"
+        maxWidth='full'
         opacity={0}
-        transitionProperty="opacity"
-        transitionDuration="slow"
-        transitionTimingFunction="ease-out"
+        transitionProperty='opacity'
+        transitionDuration='slow'
+        transitionTimingFunction='ease-out'
         _groupHover={{
           opacity: 1,
           width: "fit-content",
-          marginLeft: 3,
+          marginLeft: 3
         }}
         sx={{
           "@media(hover: none)": {
             opacity: 1,
             width: "fit-content",
-            marginLeft: 3,
-          },
+            marginLeft: 3
+          }
         }}
       >
         {status.text}
       </Text>
     </HStack>
-  );
-};
+  )
+}
 
-export default Status;
+export default Status

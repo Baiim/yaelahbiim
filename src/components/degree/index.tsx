@@ -1,4 +1,4 @@
-import { Degree, Degree } from "../../types/degree"
+import { Degree } from "../../types/degree"
 import {
   Box,
   Heading,
@@ -21,20 +21,20 @@ const Degree = ({ title, date, location, icon, details }: Degree) => {
   return (
     <Box
       p={4}
-      w="100%"
-      rounded="lg"
+      w='100%'
+      rounded='lg'
       bg={mode(LIGHT_CARD_COLOR, DARK_CARD_COLOR)}
-      boxShadow="lg"
+      boxShadow='lg'
     >
       <HStack spacing={6}>
         <Icon
           as={icon}
           color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-          boxSize="12"
+          boxSize='12'
         />
-        <VStack spacing={1} align="start">
-          <Heading fontSize="lg">{title}</Heading>
-          <Text fontWeight="light">
+        <VStack spacing={1} align='start'>
+          <Heading fontSize='lg'>{title}</Heading>
+          <Text fontWeight='light'>
             {date} •<em> {location}</em>
           </Text>
           <UnorderedList>
