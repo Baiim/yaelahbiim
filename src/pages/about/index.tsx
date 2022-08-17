@@ -8,12 +8,12 @@ import Scene from "../../components/scene"
 import Layout from "../../components/layout"
 import AboutHero from "../../components/about-hero"
 import Experience from "../../components/experience"
-import ProjectCard from "../../components/project-card"
+import SkillCard from "../../components/skill-card"
 import experiences from "../../data/experiences"
 import Degree from "../../components/degree"
 import degrees from "../../data/degrees"
 import ScrollIdButton from "../../components/scroll-id-button"
-import projects from "../../data/projects"
+import skills from "../../data/skills"
 
 const About = () => {
   return (
@@ -21,23 +21,24 @@ const About = () => {
       <VStack py={{ base: 20, md: 0 }}>
         <AboutHero />
         <Scene
-          number={1}
-          summaryTitle='What I created'
-          title='My Portfolio'
+          id='skills'
+          number={2}
+          summaryTitle='What I learned'
+          title='My skills'
           align='start'
         >
           <Text align='center' color='gray.500'>
-            <strong>the professional world</strong>.{" "}
+            I was able to learn these skills mainly by{" "}
+            <strong>self-taught</strong> and
+            <strong> autonomously</strong> but also from some of my experiences.{" "}
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={6}>
-            {projects.map(({ image, title, description, stack, link }) => (
-              <ProjectCard
-                key={image}
-                image={image}
+            {skills.map(({ image, title, description }) => (
+              <SkillCard
+                key={title}
                 title={title}
+                image={image}
                 description={description}
-                link={link}
-                stack={stack}
               />
             ))}
           </Stack>
