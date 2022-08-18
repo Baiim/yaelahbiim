@@ -1,13 +1,13 @@
-import { Box } from "@chakra-ui/react";
-import DesktopCopyright from "../copyright";
-import MobileCopyright from "../copyright/mobile";
+import { Box } from "@chakra-ui/react"
+import DesktopCopyright from "../copyright"
+import MobileCopyright from "../copyright/mobile"
 
 const Footer = () => {
   return (
     <>
       <Box
-        as="footer"
-        position="fixed"
+        as='footer'
+        position='fixed'
         display={{ base: "none", lg: "inline" }}
         bottom={5}
         left={5}
@@ -15,16 +15,16 @@ const Footer = () => {
         <DesktopCopyright />
       </Box>
       <Box
-        as="footer"
+        as='footer'
         display={{ base: "inline", lg: "none" }}
         position={{ base: "absolute" }}
-        w="full"
-        transform="translateY(-30px)"
+        w='full'
+        transform='translateY(-30px)'
       >
         <MobileCopyright />
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

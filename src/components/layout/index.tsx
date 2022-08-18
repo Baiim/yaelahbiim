@@ -39,7 +39,7 @@ const Layout = ({ children, title, description }: LayoutProps) => {
           handle: "@yaelahbiim"
         }}
         openGraph={{
-          url: "https://www.yaelahbiim.me",
+          url: "https://www.yaelahbiim.vercel.app",
           title: title + " | Sektiawan Bimo Prihpambudi",
           description: description,
           locale: "en_US",
@@ -61,14 +61,14 @@ const Layout = ({ children, title, description }: LayoutProps) => {
         ]}
       />
       <MotionContainer
-        display="flex"
+        display='flex'
         maxW={{ base: "container.lg", xl: "container.xl" }}
         minH={{ base: "auto", md: "100vh" }}
         px={{ base: 4, lg: 0 }}
-        overflow="hidden"
-        initial="hidden"
-        animate="enter"
-        exit="exit"
+        overflow='hidden'
+        initial='hidden'
+        animate='enter'
+        exit='exit'
         variants={variants}
         centerContent
       >

@@ -117,16 +117,26 @@ const HomeHero = () => {
           <Stack spacing={10} direction={"row"} align='justify'>
             <NextLink href='/project' passHref>
               <Button
-                rounded={"full"}
-                px={10}
+                w={{ base: "100%", lg: "50%" }}
+                size='md'
+                rounded='full'
+                fontWeight='normal'
                 colorScheme='hakka'
+                transition='ease-in-out .3s'
                 variant='outline'
               >
                 See my project
               </Button>
             </NextLink>
             <NextLink href='/lib/resume.pdf' passHref>
-              <Button rounded={"full"} px={10}>
+              <Button
+                w={{ base: "100%", lg: "50%" }}
+                size='md'
+                rounded='full'
+                fontWeight='normal'
+                colorScheme='hakka'
+                transition='ease-in-out .3s'
+              >
                 Download Resume
               </Button>
             </NextLink>

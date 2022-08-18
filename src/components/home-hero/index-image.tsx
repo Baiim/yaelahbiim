@@ -11,7 +11,7 @@ import Status from "../../components/status"
 
 const IndexImage = (props: BoxProps) => {
   return (
-    <Box position="relative" {...props}>
+    <Box position='relative' {...props}>
       <motion.div
         initial={{ x: "100px", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -23,16 +23,16 @@ const IndexImage = (props: BoxProps) => {
       >
         <Center>
           <Image
-            alt="Home Hero Image"
-            fit="cover"
-            align="center"
-            rounded="2xl"
-            boxShadow="lg"
-            border="2px solid"
+            alt='Home Hero Image'
+            fit='cover'
+            align='center'
+            rounded='2xl'
+            boxShadow='lg'
+            border='2px solid'
             width={400}
             height={400}
             borderColor={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-            src="/images/photo.jpg"
+            src='/images/photo.jpg'
           />
           <Status />
         </Center>
