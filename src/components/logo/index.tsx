@@ -40,7 +40,7 @@ const Logo = () => {
         <NextLink href='/' passHref>
           <Link
             as='h1'
-            fontSize='3xl'
+            fontSize='2xl'
             fontFamily={["Berkshire Swash"]}
             _hover={{ textDecoration: "none" }}
           >
