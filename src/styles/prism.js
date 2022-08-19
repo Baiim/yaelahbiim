@@ -1,5 +1,5 @@
-import { css } from "@emotion/react";
-import { theme } from "@chakra-ui/react";
+import { css } from "@emotion/react"
+import { theme } from "@chakra-ui/react"
 
 const prismBaseTheme = css`
   code {
@@ -18,7 +18,7 @@ const prismBaseTheme = css`
     line-height: ${theme.lineHeights[2]};
     -moz-tab-size: 4;
     -o-tab-size: 4;
-    tab-size: 4;
+    tab-size: 4;o
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
@@ -137,7 +137,7 @@ const prismBaseTheme = css`
       margin-top: 0 !important;
     }
   }
-`;
+`
 
 export const prismLightTheme = css`
   ${prismBaseTheme};
@@ -153,7 +153,7 @@ export const prismLightTheme = css`
   .mdx-marker {
     background-color: hsla(204, 45%, 96%, 1);
   }
-`;
+`
 
 export const prismDarkTheme = css`
   ${prismBaseTheme};
@@ -225,4 +225,4 @@ export const prismDarkTheme = css`
     color: ${theme.colors.gray[100]};
     border: 1px solid ${theme.colors.gray[700]};
   }
-`;
+`
