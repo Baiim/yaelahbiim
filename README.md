@@ -1,4 +1,4 @@
-# yaelahbiim.dev (Coming soon release)
+# yaelahbiim.vercel.app (current domain)
 
 [![heart](https://img.shields.io/static/v1?label=Build%20With&message=❤&color=darkred&labelColor=red&style=for-the-badge)]()
 [![foryou](https://img.shields.io/static/v1?label=For&message=You&color=aqua&labelColor=blue&style=for-the-badge)]()

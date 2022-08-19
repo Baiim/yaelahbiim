@@ -3,9 +3,9 @@ import {
   Heading,
   Stack,
   Text,
+  useBreakpointValue,
   useColorModeValue as mode
 } from "@chakra-ui/react"
-import { BiArrowToRight } from "@react-icons/all-files/bi/BiArrowToRight"
 import { motion } from "framer-motion"
 import NextLink from "next/link"
 import Typed from "react-typed"
@@ -14,12 +14,13 @@ import IndexImage from "./index-image"
 import ExternalLink from "../external-link"
 
 const HomeHero = () => {
+  const isMobile = useBreakpointValue({ base: true, lg: false })
   return (
     <Stack
       align='center'
       justify='center'
       spacing={{ base: 5, md: 10 }}
-      minH='100vh'
+      minH={isMobile ? "130vh" : "100vh"}
       direction={{ base: "column", md: "row" }}
     >
       <Stack
@@ -59,8 +60,8 @@ const HomeHero = () => {
               as='span'
               color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
               fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
-              fontFamily='Berkshire Swash'
               zIndex={-100}
+              fontFamily='Berkshire Swash'
             >
               <Typed
                 strings={[
@@ -68,7 +69,7 @@ const HomeHero = () => {
                   "Frontend Developer",
                   "Software Developer"
                 ]}
-                typeSpeed={100}
+                typeSpeed={30}
                 backSpeed={40}
                 backDelay={1500}
                 startDelay={800}
@@ -83,9 +84,9 @@ const HomeHero = () => {
           transition={{ delay: 1.0, duration: 0.4 }}
         >
           <Text
-            fontSize='md'
+            fontSize='lg'
             color={mode("gray.800", "gray.400")}
-            as='h3'
+            as='h2'
             align='justify'
             fontFamily='Poppins'
           >

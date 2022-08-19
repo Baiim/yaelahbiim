@@ -16,7 +16,7 @@ const Header = () => {
         }}
       >
         <Box w='100%' left={0} top={0}>
-          <HStack w='100%' justify='space-between' p={8}>
+          <HStack w='100%' justify='space-between' p={4}>
             <Logo />
             <CommandButton />
           </HStack>

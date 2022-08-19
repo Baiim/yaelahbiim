@@ -1,21 +1,21 @@
-import React, { Children } from "react";
-import "../styles/globals.css";
+import React, { Children } from "react"
+import "../styles/globals.css"
 import {
   ChakraProvider,
   ColorModeProvider,
-  useColorMode,
-} from "@chakra-ui/react";
-import { Global, css } from "@emotion/react";
-import type { AppProps } from "next/app";
-import { prismLightTheme, prismDarkTheme } from "../styles/prism";
-import MainLayout from "../components/main-layout";
-import theme from "../theme";
-import Command from "../components/command";
-import CommandProvider from "../components/providers/command-provider";
-import { AnimatePresence } from "framer-motion";
+  useColorMode
+} from "@chakra-ui/react"
+import { Global, css } from "@emotion/react"
+import type { AppProps } from "next/app"
+import { prismLightTheme, prismDarkTheme } from "../styles/prism"
+import MainLayout from "../components/main-layout"
+import theme from "../theme"
+import Command from "../components/command"
+import CommandProvider from "../components/providers/command-provider"
+import { AnimatePresence } from "framer-motion"
 
 const GlobalStyle = ({ children }: { [key: string]: any }) => {
-  const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode()
   return (
     <>
       <Global
@@ -45,8 +45,8 @@ const GlobalStyle = ({ children }: { [key: string]: any }) => {
       />
       {children}
     </>
-  );
-};
+  )
+}
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <CommandProvider>
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ColorModeProvider
           options={{
             initialColorMode: "light",
-            useSystemColorMode: true,
+            useSystemColorMode: true
           }}
         >
           <MainLayout>
@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </ColorModeProvider>
       </ChakraProvider>
     </CommandProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp
